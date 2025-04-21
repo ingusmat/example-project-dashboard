@@ -21,19 +21,19 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   // Map statuses to Tailwind-safe color classes
   const statusColorBar = clsx({
-    'bg-status-error': project.isPastDue === true,
+    'bg-status-error': project.isPastDue === true && project.status !== 'approved',
     'bg-status-approved': project.status === 'approved',
     'bg-status-pending': project.status === 'waiting_approval' && project.isPastDue === false,
   });
 
   const statusProgress = clsx({
-    'bg-status-error': project.isPastDue === true,
+    'bg-status-error': project.isPastDue === true && project.status !== 'approved',
     'bg-status-approved': project.status === 'approved',
     'bg-status-pending': project.status === 'waiting_approval',
   });
 
   const statusIcon = useMemo(() => {
-    if (project.isPastDue) {
+    if (project.isPastDue && project.status !== 'approved') {
       return <CalendarClock className="w-6 h-6 m-2" />;
     }
 
