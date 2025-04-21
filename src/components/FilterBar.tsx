@@ -89,10 +89,7 @@ export function FilterBar() {
       {/* Applied Filters */}
       {Object.entries(filters).map(([key, value]) =>
         value ? (
-          <div
-            key={key}
-            className="flex items-center gap-1 px-2 py-1 bg-border dark:bg-border-dark rounded-full text-sm"
-          >
+          <div key={key} className="flex items-center gap-1 px-2 py-1 bg-bg rounded-md text-sm">
             <span className="capitalize">{key}:</span>
             <span>{value}</span>
             <button onClick={() => clearFilter(key as keyof typeof filters)}>
