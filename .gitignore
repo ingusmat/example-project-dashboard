@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+dist
+.cache
+coverage
+
+# Vite & build artifacts
+.vite
+.env
+.env.*.local
+
+# IDE stuff
+.idea
+.vscode
+.DS_Store
+*.log
+
+# OS junk
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional: Mac screenshots if you’re copy-pasting a lot
+Screen\ Shot*
+
+# Deployment
+gh-pages
+
