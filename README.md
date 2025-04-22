@@ -32,7 +32,7 @@ Designed with Tailwind, Zustand, and 💜.
 
 ```bash
 git clone https://github.com/ingusmat/example-project-dashboard.git
-cd takehome-ui
+cd example-project-dashboard
 npm install
 npm run dev
 
